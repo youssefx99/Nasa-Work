@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "ali Dawoud",
+    "mail": "alidawoud99@gmail.com",
+    "password": "123456",
+    "country": "Egypt",
+    "Phone": "01094263212",
+    "balance": 500
+  },
+  {
+    "id": 2,
+    "name": "John Smith",
+    "mail": "john.smith@example.com",
+    "password": "password123",
+    "country": "United States",
+    "Phone": "123-456-7890",
+    "balance": 750
+  },
+  {
+    "id": 3,
+    "name": "Maria Garcia",
+    "mail": "maria.garcia@example.com",
+    "password": "securepass",
+    "country": "Spain",
+    "Phone": "+34 123 456 789",
+    "balance": 1000
+  },
+  {
+    "id": 4,
+    "name": "Hiroshi Tanaka",
+    "mail": "hiroshi.tanaka@example.jp",
+    "password": "japan123",
+    "country": "Japan",
+    "Phone": "+81 90-1234-5678",
+    "balance": 300
+  },
+  {
+    "id": 5,
+    "name": "Linda Johnson",
+    "mail": "linda.johnson@example.com",
+    "password": "password456",
+    "country": "Canada",
+    "Phone": "416-555-7890",
+    "balance": 600
+  }
+]
