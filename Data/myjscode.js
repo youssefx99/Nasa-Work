@@ -69,7 +69,42 @@ let systemAccounts = [acc1];
 //////////////////////////////// Bank Page ///////////////////////////////
 
 */
+/////////////////////////////////////////////////////////////////////
 
+// Get a reference to the "Daily" card element by its class name
+// Get a reference to the "Daily" card element by its class name
+/*
+const dailyCard = document.querySelector(".daily");
+
+// Function to set the background color
+function setBackground() {
+  dailyCard.style.backgroundImage =
+    "linear-gradient(to bottom right, rgb(255, 255, 255), rgb(91, 91, 91))";
+
+  // Store the background color in localStorage
+  localStorage.setItem("backgroundColor", dailyCard.style.backgroundImage);
+}
+
+// Check if there's a saved background color and apply it
+const savedBackgroundColor = localStorage.getItem("backgroundColor");
+if (savedBackgroundColor) {
+  dailyCard.style.backgroundImage = savedBackgroundColor;
+}
+// Add a click event listener to the card
+dailyCard.addEventListener("click", function () {
+  setBackground();
+});
+*/
+/////////////////////////////////////////////////////////////////////
+
+// Back to courses and upgrade the balance
+/*
+const doneBtn = document.querySelector(".doneBtnReal");
+doneBtn.addEventListener("click", function () {
+  console.log("sdgasdgdsf");
+  // window.location.href = "../HTML/courses.html";
+});
+*/
 
 /////////////////////////////////////////////////////////////////////
 class User {

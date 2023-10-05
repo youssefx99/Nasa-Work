@@ -23,7 +23,7 @@ fetch('../Data/courses_data.json')
                         <iframe class="iframeVideoYoutube" width="560" height="315" src="${turget.videoLink}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
                      </div>
                     <div class="TopicControls">
-                        <div class="doneBtn"><button>Done</button></div>
+                        <div class="doneBtn"><button class ='doneBtnReal'>Done</button></div>
                         <div class="starBtn"><button class="star-fav fav-selected"><i class="fa-regular fa-star"></i></button></div>
                     </div>
                  </div>

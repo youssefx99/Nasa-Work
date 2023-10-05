@@ -13,8 +13,8 @@ body {
 }
 
 .usersInfo {
+  font-size: 1.7em;
   width: 800px;
-  background-color: red;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -23,13 +23,15 @@ body {
   justify-content: center;
   align-items: center;
 
+  margin-top: 5em;
+
   border: 2px solid black;
 }
 
 .theUser {
   padding: 20px;
   margin: 10px 0px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.988);
   width: 100%;
 }
 
@@ -39,4 +41,8 @@ body {
 
 .userData {
   display: flex;
+}
+
+.data {
+  margin-right: 20px;
 }

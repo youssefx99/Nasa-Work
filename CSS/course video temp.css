@@ -13,18 +13,25 @@
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
+
+  background-image: linear-gradient(to bottom, #dce3ff, #ffffff);
 }
 
 .topicTitle {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
+  width: 560px;
 }
 
 .videoControlSection {
   flex: 0 0 auto;
   position: sticky;
-  top: 35px;
+  top: 20px;
+  border: 1px solid rgb(106, 139, 246);
+  background-image: linear-gradient(to bottom, #94aaff, #ffffff);
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .TopicControls {
@@ -83,6 +90,10 @@
 .infoSection {
   border-left: 2px solid black;
   padding-left: 30px;
+  border: 1px solid rgb(106, 139, 246);
+  background-image: linear-gradient(to bottom, #ced3ff, #dee0ff);
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .infoTitle {

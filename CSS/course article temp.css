@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to bottom, #dce3ff, #ffffff);
 }
 
 .article-title {
@@ -27,6 +28,7 @@
   border: 1px solid black;
   border-radius: 30px;
   text-align: center;
+  background-image: linear-gradient(to bottom, #cad4ff, #ffffff);
 }
 
 .articel-img1 {
