@@ -1,3 +1,11 @@
+
+// redirect if not authorized
+if(!localStorage.getItem('user')){
+    window.location.href = './login.html';
+}
+let user = JSON.parse(localStorage.getItem('user'));
+
+
 const navbar = `
 <!--<nav class="navbar navbar-expand-lg navbar-light bg-light my-main-navbar">-->
       <button
@@ -18,16 +26,16 @@ const navbar = `
         <a class="navbar-brand" href="../HTML/main.html">AQua Water</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <span class="nav-link nav-bar-userName">Hello, Ali</span>
+            <span class="nav-link nav-bar-userName">Hello, ${user.name}</span>
           </li>
           <li class="nav-item">
             <span class="nav-link active">
-              # <span class="user--rank">1</span>
+              # <span class="user--rank">${user.rank}</span>
             </span>
           </li>
           <li class="nav-item">
             <span class="nav-link active">
-              Balance: <span class="user--balance">0 💧</span>
+              Balance: <span class="user--balance">${user.balance} 💧</span>
             </span>
           </li>
         </ul>

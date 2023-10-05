@@ -1,3 +1,11 @@
+// redirect if not authorized
+if(!localStorage.getItem('user')){
+  window.location.href = './login.html';
+}
+const userId = JSON.parse(localStorage.getItem('user')).id;
+const url = window.location.href;
+const searchParams = new URLSearchParams(url.split('?')[1]);
+const id = searchParams.get('id');
 // Select Elements
 let countSpan = document.querySelector(".count span");
 let bullets = document.querySelector(".bullets");
@@ -18,7 +26,12 @@ function getQuestions() {
 
   myRequest.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
-      let questionsObject = JSON.parse(this.responseText);
+      let allQuestionsObject = JSON.parse(this.responseText);
+      let questionsObject = null;
+      allQuestionsObject.forEach(obj => {
+        if(obj.id == id) questionsObject = obj.quiz;
+      });
+      if(!questionsObject) alert('Error!!');
       let qCount = questionsObject.length;
 
       // Create Bullets + Set Questions Count
@@ -61,7 +74,7 @@ function getQuestions() {
     }
   };
 
-  myRequest.open("GET", "../Data/course1Quizes.json", true);
+  myRequest.open("GET", "../Data/courses_data.json", true);
   myRequest.send();
 }
 
@@ -167,7 +180,23 @@ function handleBullets() {
     }
   });
 }
+// Youssef Function To add Successful Item Id To Local Storage
+function addCourseItemToLocalStorage(item_id) {
+  let currentItems = [];
 
+  // Check if 'course_items' exists in localStorage
+  if (localStorage.getItem('course_items')) {
+    currentItems = JSON.parse(localStorage.getItem('course_items'));
+  }
+
+  // Check if item_id is not already in the array
+  if (!currentItems.includes(item_id)) {
+    currentItems.push(+item_id);
+  }
+
+  // Update or create 'course_items' in localStorage
+  localStorage.setItem('course_items', JSON.stringify(currentItems));
+}
 function showResults(count) {
   let theResults;
   if (currentIndex === count) {
@@ -178,6 +207,7 @@ function showResults(count) {
 
     if (rightAnswers > count / 2 && rightAnswers < count) {
       theResults = `<span class="good">Good</span>, ${rightAnswers} From ${count}`;
+      addCourseItemToLocalStorage(id);
     } else if (rightAnswers === count) {
       theResults = `<span class="perfect">Perfect</span>, All Answers Is Good`;
     } else {
